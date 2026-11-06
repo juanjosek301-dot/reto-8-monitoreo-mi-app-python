@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f3eb">
+  <title>Café Nube | Pedidos</title>
+  <style>
+    :root{--ink:#26332d;--muted:#69736d;--paper:#fbfaf6;--cream:#f1ede3;--green:#365b49;--green2:#dce9df;--orange:#c16b42;--line:#e8e4db;--white:#fff;--shadow:0 18px 45px #29382f12}
+    *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.5 Inter,"Segoe UI",Arial,sans-serif}button{font:inherit;cursor:pointer}.topbar{height:76px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 max(24px,calc((100vw - 1220px)/2));background:#fbfaf6ed;position:sticky;top:0;z-index:5;backdrop-filter:blur(12px)}.brand{display:flex;align-items:center;gap:12px;font-weight:750;letter-spacing:-.4px}.brand-mark{width:40px;height:40px;border-radius:14px;background:var(--green);color:white;display:grid;place-items:center;font-size:21px}.brand small{display:block;color:var(--muted);font-size:11px;font-weight:500;letter-spacing:.1px;margin-top:-3px}.nav{display:flex;align-items:center;gap:24px}.nav a{color:var(--muted);text-decoration:none;font-size:13px}.nav a:hover{color:var(--green)}.cart-pill{border:0;border-radius:999px;background:var(--green);color:white;padding:10px 16px;font-weight:650}.cart-pill span{background:#ffffff32;border-radius:50%;padding:2px 7px;margin-left:6px}.container{max-width:1220px;padding:0 24px;margin:auto}.hero{margin:34px auto 50px;min-height:300px;border-radius:28px;background:linear-gradient(105deg,#233b30f2 0%,#294435e8 50%,#29443540 100%),url("https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1800&q=85") center 53%/cover;color:white;display:flex;align-items:center;padding:52px 62px;overflow:hidden;position:relative}.hero:after{content:"";position:absolute;width:340px;height:340px;border:1px solid #ffffff30;border-radius:50%;right:13%;top:-80px;box-shadow:0 0 0 35px #ffffff0d,0 0 0 70px #ffffff08}.hero-copy{position:relative;z-index:1;max-width:510px}.eyebrow{font-size:11px;font-weight:750;letter-spacing:1.8px;text-transform:uppercase;color:#e4b992}.hero h1{font:500 clamp(40px,5vw,58px)/1.04 Georgia,serif;letter-spacing:-1.8px;margin:13px 0 15px}.hero p{color:#e3e8e2;margin:0 0 25px;max-width:430px}.hero .button{background:#f3e8d6;color:#26332d}.button{border:0;border-radius:12px;background:var(--green);color:white;padding:12px 17px;font-weight:650;transition:transform .15s,background .15s}.button:hover{transform:translateY(-1px);background:#284a38}.button.secondary{background:var(--cream);color:var(--ink)}.button.secondary:hover{background:#e8e2d6}.section-head{display:flex;align-items:end;justify-content:space-between;margin-bottom:18px}.section-head h2{font:500 32px/1.1 Georgia,serif;letter-spacing:-.5px;margin:0 0 6px}.section-head p{margin:0;color:var(--muted);font-size:13px}.menu-layout{display:grid;grid-template-columns:minmax(0,1fr) 325px;gap:30px;align-items:start}.filters{display:flex;gap:8px;flex-wrap:wrap;margin:23px 0}.filter{border:1px solid var(--line);background:transparent;border-radius:999px;padding:8px 14px;color:var(--muted);font-size:13px}.filter.active,.filter:hover{border-color:var(--green);color:var(--green);background:var(--green2)}.product-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.product{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:0 4px 15px #29382f07;display:flex;flex-direction:column;min-height:205px}.product-top{display:flex;align-items:flex-start;justify-content:space-between}.product-icon{width:44px;height:44px;border-radius:15px;background:#f3eee3;display:grid;place-items:center;font-size:23px}.category{font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-top:14px}.product h3{font-size:16px;margin:4px 0 3px}.product p{font-size:12px;color:var(--muted);margin:0 0 16px}.product-bottom{margin-top:auto;display:flex;align-items:center;justify-content:space-between}.price{font-weight:750}.add{height:34px;width:38px;border:0;border-radius:11px;background:var(--green2);color:var(--green);font-size:21px;line-height:1}.add:hover{background:var(--green);color:white}.panel{background:var(--white);border:1px solid var(--line);border-radius:20px;padding:21px;box-shadow:var(--shadow)}.cart-panel{position:sticky;top:96px}.panel h2{font:500 24px Georgia,serif;margin:0}.subtle{font-size:12px;color:var(--muted);margin:5px 0 17px}.cart-lines{min-height:92px}.empty{display:grid;place-items:center;text-align:center;color:var(--muted);font-size:13px;padding:22px 8px}.cart-line{display:grid;grid-template-columns:1fr auto;gap:10px;padding:12px 0;border-bottom:1px solid var(--line)}.cart-line strong{font-size:13px;display:block}.cart-line small{color:var(--muted)}.qty{display:flex;align-items:center;gap:9px}.qty button{border:1px solid var(--line);background:white;border-radius:8px;width:25px;height:25px;color:var(--green)}.total{display:flex;justify-content:space-between;border-top:1px solid var(--line);padding-top:14px;margin:13px 0 16px;font-weight:750}.full{width:100%}.order-note{width:100%;border:1px solid var(--line);border-radius:10px;padding:10px 11px;margin:0 0 13px;resize:vertical;font:inherit;font-size:12px}.hint{font-size:11px;color:var(--muted);margin:10px 0 0}.orders-section{padding:62px 0 75px}.orders-list{display:grid;gap:12px}.order-card{background:white;border:1px solid var(--line);border-radius:16px;padding:17px 19px;display:flex;align-items:center;justify-content:space-between;gap:18px}.order-info{display:flex;align-items:center;gap:14px}.order-icon{width:45px;height:45px;background:#f3eee3;border-radius:14px;display:grid;place-items:center;font-size:22px}.order-info h3{font-size:14px;margin:0}.order-info p{font-size:12px;color:var(--muted);margin:3px 0 0}.order-actions{display:flex;align-items:center;gap:10px}.status{font-size:10px;font-weight:750;letter-spacing:.4px;border-radius:999px;padding:6px 10px;background:#f3eee3;color:#6e5c3e}.status.preparing{background:#e5edff;color:#385989}.status.ready{background:#e2f2e8;color:#326247}.status.done{background:#e9e9e7;color:#666}.status.cancel{background:#fde9e4;color:#9c4d35}.order-actions .button{padding:8px 12px;font-size:12px}.error-action{border:1px solid #f0d8cf;border-radius:12px;background:#fff8f5;color:#a25238;padding:11px 15px;font-weight:650}.error-action:hover{background:#fbe8e0}.footer{border-top:1px solid var(--line);padding:22px 0;color:var(--muted);font-size:12px}.footer-inner{display:flex;justify-content:space-between;align-items:center}.footer a{color:var(--green);text-decoration:none;margin-left:14px}.toast{position:fixed;bottom:22px;left:50%;transform:translate(-50%,20px);background:#26332d;color:white;border-radius:12px;padding:12px 18px;box-shadow:var(--shadow);opacity:0;pointer-events:none;transition:.2s;z-index:10}.toast.show{opacity:1;transform:translate(-50%,0)}.connection{display:inline-flex;align-items:center;gap:7px;color:#597262;font-size:11px}.dot{width:8px;height:8px;border-radius:50%;background:#65a878;box-shadow:0 0 0 3px #65a87822}.loading{color:var(--muted);padding:28px;text-align:center;grid-column:1/-1}
+    @media(max-width:900px){.menu-layout{grid-template-columns:1fr}.cart-panel{position:static;grid-row:1}.product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{padding:38px 35px}.nav{gap:12px}}
+    @media(max-width:560px){.topbar{height:66px;padding:0 16px}.nav a{display:none}.container{padding:0 16px}.hero{margin:20px auto 36px;padding:32px 24px;min-height:275px;border-radius:21px;background-position:60% center}.hero h1{font-size:43px}.section-head h2{font-size:28px}.product-grid{gap:10px}.product{padding:13px;min-height:195px}.order-card{align-items:flex-start;flex-direction:column}.order-actions{width:100%;justify-content:space-between}.footer-inner{align-items:flex-start;gap:8px;flex-direction:column}}
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#inicio" style="text-decoration:none;color:inherit">
+      <span class="brand-mark">☕</span><span>Café Nube<small>café de todos los días</small></span>
+    </a>
+    <nav class="nav" aria-label="Navegación principal">
+      <a href="#menu">Menú</a><a href="#pedidos">Mis pedidos</a>
+      <span class="connection"><i class="dot"></i> Servicio activo</span>
+      <button class="cart-pill" onclick="document.querySelector('#pedido').scrollIntoView({behavior:'smooth'})">Tu pedido <span id="cart-count">0</span></button>
+    </nav>
+  </header>
+  <main id="inicio" class="container">
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow">Un buen día empieza aquí</div>
+        <h1>Tu pausa<br>favorita.</h1>
+        <p>Café recién preparado, algo rico para acompañar y un momento para ti. Pide en línea y sigue tu pedido.</p>
+        <button class="button" onclick="document.querySelector('#menu').scrollIntoView({behavior:'smooth'})">Explorar el menú&nbsp; ↓</button>
+      </div>
+    </section>
+
+    <section id="menu">
+      <div class="section-head">
+        <div><div class="eyebrow" style="color:var(--orange)">Hecho con cariño</div><h2>El menú</h2><p>Favoritos de la casa, preparados al momento.</p></div>
+      </div>
+      <div class="menu-layout">
+        <div>
+          <div id="filters" class="filters"></div>
+          <div id="products" class="product-grid"><div class="loading">Cargando el menú…</div></div>
+        </div>
+        <aside id="pedido" class="panel cart-panel">
+          <h2>Tu pedido</h2><p class="subtle">Revisa lo que vas a disfrutar.</p>
+          <div id="cart-lines" class="cart-lines"><div class="empty">Tu carrito está esperando<br>algo delicioso.</div></div>
+          <label class="subtle" for="note" style="display:block;margin:5px 0 7px">Nota para la cocina (opcional)</label>
+          <textarea class="order-note" id="note" rows="2" placeholder="Ej. leche deslactosada"></textarea>
+          <div class="total"><span>Total</span><span id="cart-total">$0</span></div>
+          <button id="checkout" class="button full" onclick="checkout()" disabled>Confirmar pedido</button>
+          <p class="hint">Pago al recoger en caja.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="pedidos" class="orders-section">
+      <div class="section-head">
+        <div><div class="eyebrow" style="color:var(--orange)">Siempre al punto</div><h2>Seguimiento de pedidos</h2><p>Avanza el pedido para ver cada etapa de preparación.</p></div>
+        <button class="button secondary" onclick="loadOrders()">Actualizar</button>
+      </div>
+      <div id="orders" class="orders-list"><div class="empty">Todavía no hay pedidos. ¡Elige algo del menú!</div></div>
+      <div style="margin-top:18px"><button class="error-action" onclick="triggerError()">Probar registro de error</button><span class="hint" style="margin-left:9px">Genera un evento ERROR de demostración para Kibana.</span></div>
+    </section>
+  </main>
+  <footer class="footer"><div class="container footer-inner"><span>© Café Nube · Un café y seguimos.</span><span>Reto de monitoreo <a href="/metrics" target="_blank">Métricas</a><a href="/docs" target="_blank">API</a></span></div></footer>
+  <div id="toast" class="toast" role="status"></div>
+
+  <script>
+    const icons = {americano:"☕",capuccino:"☕",latte:"🥛","te-chai":"🍵",croissant:"🥐"};
+    const descriptions = {americano:"Intenso, limpio y aromático.",capuccino:"Espresso, leche cremosa y cacao.",latte:"Suave, sedoso y reconfortante.","te-chai":"Especias cálidas y un toque dulce.",croissant:"Hojaldre dorado, recién horneado."};
+    let menu = [], cart = {}, activeCategory = "Todos", toastTimer;
+    const money = value => new Intl.NumberFormat("es-CO",{style:"currency",currency:"COP",maximumFractionDigits:0}).format(value);
+    async function api(path, options={}) {
+      const response = await fetch(path,{...options,headers:{"Content-Type":"application/json",...(options.headers||{})}});
+      const data = await response.json().catch(()=>({}));
+      if(!response.ok) throw new Error(data.detail || "No se pudo completar la solicitud.");
+      return data;
+    }
+    function notify(message){const el=document.getElementById("toast");el.textContent=message;el.classList.add("show");clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.remove("show"),2800)}
+    function renderFilters(){const categories=["Todos",...new Set(menu.map(item=>item.category))];document.getElementById("filters").innerHTML=categories.map(category=>`<button class="filter ${category===activeCategory?"active":""}" onclick="setCategory('${category}')">${category}</button>`).join("")}
+    function setCategory(category){activeCategory=category;renderFilters();renderMenu()}
+    function renderMenu(){const items=activeCategory==="Todos"?menu:menu.filter(item=>item.category===activeCategory);document.getElementById("products").innerHTML=items.map(item=>`<article class="product"><div class="product-top"><span class="product-icon">${icons[item.product_id]||"☕"}</span></div><div class="category">${item.category}</div><h3>${item.name}</h3><p>${descriptions[item.product_id]||"Preparado al momento."}</p><div class="product-bottom"><span class="price">${money(item.price_cop)}</span><button class="add" aria-label="Agregar ${item.name}" onclick="addToCart('${item.product_id}')">+</button></div></article>`).join("")||'<div class="loading">No hay productos en esta categoría.</div>'}
+    function addToCart(id){cart[id]=(cart[id]||0)+1;renderCart();notify("Agregado a tu pedido")}
+    function changeQty(id,delta){cart[id]=(cart[id]||0)+delta;if(cart[id]<=0)delete cart[id];renderCart()}
+    function renderCart(){const lines=Object.entries(cart);const count=lines.reduce((sum,[,qty])=>sum+qty,0);const total=lines.reduce((sum,[id,qty])=>sum+(menu.find(item=>item.product_id===id)?.price_cop||0)*qty,0);document.getElementById("cart-count").textContent=count;document.getElementById("cart-total").textContent=money(total);document.getElementById("checkout").disabled=!count;document.getElementById("cart-lines").innerHTML=lines.length?lines.map(([id,qty])=>{const item=menu.find(product=>product.product_id===id);return `<div class="cart-line"><div><strong>${item.name}</strong><small>${money(item.price_cop)} c/u</small></div><div class="qty"><button onclick="changeQty('${id}',-1)">−</button><span>${qty}</span><button onclick="changeQty('${id}',1)">+</button></div></div>`}).join(""):'<div class="empty">Tu carrito está esperando<br>algo delicioso.</div>'}
+    async function checkout(){const button=document.getElementById("checkout");button.disabled=true;try{const note=document.getElementById("note").value.trim()||null;for(const [product_id,quantity] of Object.entries(cart)){await api("/api/pedidos",{method:"POST",body:JSON.stringify({product_id,quantity,note})})}cart={};document.getElementById("note").value="";renderCart();await loadOrders();notify("¡Pedido recibido! Ya está en preparación.");document.getElementById("pedidos").scrollIntoView({behavior:"smooth"})}catch(error){notify(error.message)}finally{button.disabled=!Object.keys(cart).length}}
+    const nextStatus={RECIBIDO:"PREPARANDO",PREPARANDO:"LISTO",LISTO:"ENTREGADO"};
+    const statusClass={PREPARANDO:"preparing",LISTO:"ready",ENTREGADO:"done",CANCELADO:"cancel"};
+    const statusText={RECIBIDO:"RECIBIDO",PREPARANDO:"EN PREPARACIÓN",LISTO:"LISTO PARA RECOGER",ENTREGADO:"ENTREGADO",CANCELADO:"CANCELADO"};
+    async function loadOrders(){try{const orders=await api("/api/pedidos");document.getElementById("orders").innerHTML=orders.length?orders.map(order=>{const next=nextStatus[order.status];const canCancel=["RECIBIDO","PREPARANDO"].includes(order.status);return `<article class="order-card"><div class="order-info"><span class="order-icon">${icons[order.product_id]||"☕"}</span><div><h3>${order.quantity} × ${order.product_name}</h3><p>${money(order.total_cop)} · Pedido ${order.order_id.slice(0,8)} · ${new Date(order.created_at).toLocaleTimeString("es-CO",{hour:"2-digit",minute:"2-digit"})}</p></div></div><div class="order-actions"><span class="status ${statusClass[order.status]||""}">${statusText[order.status]||order.status}</span>${next?`<button class="button" onclick="advanceOrder('${order.order_id}','${next}')">${next==="PREPARANDO"?"Empezar preparación":next==="LISTO"?"Marcar listo":"Marcar entregado"}</button>`:""}${canCancel?`<button class="button secondary" onclick="advanceOrder('${order.order_id}','CANCELADO')">Cancelar</button>`:""}</div></article>`}).join(""):'<div class="empty">Todavía no hay pedidos. ¡Elige algo del menú!</div>'}catch(error){notify(error.message)}}
+    async function advanceOrder(id,status){try{await api(`/api/pedidos/${id}/estado`,{method:"PATCH",body:JSON.stringify({status})});await loadOrders();notify(status==="CANCELADO"?"Pedido cancelado.":"Estado del pedido actualizado.")}catch(error){notify(error.message)}}
+    async function triggerError(){try{await api("/api/simulacion/error")}catch(error){notify("Error de demostración enviado a Kibana.")}}
+    async function initialize(){try{menu=await api("/api/menu");renderFilters();renderMenu();renderCart();await loadOrders()}catch(error){document.getElementById("products").innerHTML='<div class="loading">No se pudo conectar con el servicio.</div>';notify(error.message)}}
+    initialize();
+  </script>
+</body>
+</html>
